@@ -1,3 +1,4 @@
+#Indica las rutas que acepta nuestro servidor
 from app import app
 from datetime import datetime
 import re
@@ -9,7 +10,8 @@ from app import db
 @app.route('/index')
 def index():
     user = {'username': 'Nicol'}
-    return render_template('index.html', title='Home', user=user)
+    #render_templae-> crea un código html con los parámetros
+    return render_template('index.html', title='HOME', user=user)
 @app.route("/hello/<name>")
 def hello_there(name):
     now = datetime.now()
